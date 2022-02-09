@@ -1,4 +1,4 @@
-(ns learning-clojure.class3)
+(ns alura.class3)
 
 (defn apply-discount?
   "Return if the original value is enabled for discount"

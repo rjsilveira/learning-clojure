@@ -1,4 +1,4 @@
-(ns learning-clojure.class4)
+(ns alura.class4)
 
 (def values [30
              70

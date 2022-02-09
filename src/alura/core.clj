@@ -1,3 +1,3 @@
-(ns learning-clojure.core)
+(ns alura.core)
 
 (println "Hello IntelliJ")

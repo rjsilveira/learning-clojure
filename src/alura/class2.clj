@@ -1,4 +1,4 @@
-(ns learning-clojure.class2)
+(ns alura.class2)
 
 (println "Rerun in REPL")
 

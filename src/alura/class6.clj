@@ -1,4 +1,4 @@
-(ns learning-clojure.class6)
+(ns alura.class6)
 
 ;(defn calculate-and-print-value-per-item
 ;  "Calculate and print total value per item"

@@ -1,4 +1,4 @@
-(ns learning-clojure.class5)
+(ns alura.class5)
 
 (def stock {"Monitor"  10
             "Chair"    5
