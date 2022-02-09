@@ -12,5 +12,5 @@
 
   :dependencies [[org.clojure/clojure "1.10.3"]]
 
-  :repl-options {:init-ns learning-clojure.core})
+  :repl-options {:init-ns alura.introduction.core})
 
