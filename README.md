@@ -1,22 +1,12 @@
 # learning-clojure
 
-A Clojure library designed to ... well, that part is up to you.
+Project used to run features disposed in [Clojure reference](https://clojure.org/reference/repl_and_main) 
+and [Alura's course](https://www.alura.com.br/formacao-clojure)
 
 ## Usage
 
-FIXME
+Is necessary install [Cursive plugin](https://cursive-ide.com/) on IntelliJ
 
-## License
-
-Copyright © 2022 FIXME
-
-This program and the accompanying materials are made available under the
-terms of the Eclipse Public License 2.0 which is available at
-http://www.eclipse.org/legal/epl-2.0.
-
-This Source Code may also be made available under the following Secondary
-Licenses when the conditions for such availability set forth in the Eclipse
-Public License, v. 2.0 are satisfied: GNU General Public License as published by
-the Free Software Foundation, either version 2 of the License, or (at your
-option) any later version, with the GNU Classpath Exception which is available
-at https://www.gnu.org/software/classpath/license.html.
+* Import the project
+* Click with the right button in [project.clj](project.clj)
+* Click `Run 'REPL for learning-clojure'`

@@ -25,3 +25,18 @@
      (map calculate-value-per-item)
      (reduce +)
      (println))
+
+(def second-request {:monitor   {:count 10, :price 119.99}
+                     :chair     {:count 5, :price 109.99}
+                     :desk      {:count 7, :price 99.99}
+                     :keyboard  {:count 20 :price 19.99}
+                     :mouse     {:count 21 :price 15.99}
+                     :cable-usb {:count 30}})
+
+(defn free?
+  "Is item free?"
+  [item]
+  (<= (get item :price 0) 0))
+
+(println (filter free? (vals second-request)))
+
