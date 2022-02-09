@@ -10,3 +10,9 @@ Is necessary install [Cursive plugin](https://cursive-ide.com/) on IntelliJ
 * Import the project
 * Click with the right button in [project.clj](project.clj)
 * Click `Run 'REPL for learning-clojure'`
+
+## Run a .clj
+
+After run REPL, open the intended file and press:
+
+`Command + Shitf + L`
