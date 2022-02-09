@@ -28,7 +28,8 @@
   (> original-value 100))
 
 (defn discounted-value
-  "Return the discounted value if the value is enabled for that or else return the original value"
+  "Return the discounted value if the value is enabled for that or
+  else return the original value"
   [original-value]
   (if (apply-discount? original-value)
     (let [discount-tax 0.10
