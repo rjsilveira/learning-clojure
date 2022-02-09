@@ -1,4 +1,4 @@
-(ns alura.class2)
+(ns alura.introduction.class2)
 
 (println "Rerun in REPL")
 

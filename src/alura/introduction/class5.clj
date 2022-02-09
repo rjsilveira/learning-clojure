@@ -1,4 +1,4 @@
-(ns alura.class5)
+(ns alura.introduction.class5)
 
 (def stock {"Monitor"  10
             "Chair"    5

@@ -1,4 +1,4 @@
-(ns alura.class4)
+(ns alura.introduction.class4)
 
 (def values [30
              70

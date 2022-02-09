@@ -1,4 +1,4 @@
-(ns alura.class3)
+(ns alura.introduction.class3)
 
 (defn apply-discount?
   "Return if the original value is enabled for discount"
