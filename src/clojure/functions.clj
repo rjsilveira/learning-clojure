@@ -170,4 +170,3 @@ identity
 
 (def call-opposite-function (opposite my-true-function))
 (println (call-opposite-function true false true))
-
