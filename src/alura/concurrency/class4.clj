@@ -1,8 +1,7 @@
 (ns alura.concurrency.class4
   (:use [clojure pprint])
   (:require [alura.concurrency.model :as a.c.model]
-            [alura.concurrency.concurrency_logic :as a.c.concurrency_logic]
-            [clojure.spec.alpha :as s]))
+            [alura.concurrency.concurrency_logic :as a.c.concurrency_logic]))
 
 (defn coming-in-function-with-pause!
   "Coming in function"

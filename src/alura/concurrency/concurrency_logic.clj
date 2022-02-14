@@ -20,3 +20,21 @@
   "Attend a person"
   [hospital department]
   (update hospital department pop))
+
+(defn my-attend
+  "My attend"
+  [hospital department]
+  (let [queue (get hospital department)
+        functions (juxt peek pop)
+        [patient-in-attendance other-patients] (functions queue)
+        updated-hospital (update hospital assoc department other-patients)]
+    {:patient-in-attendance patient-in-attendance
+     :hospital              updated-hospital}))
+
+(defn transfer
+  "Transfer patient"
+  [hospital from to]
+  (let [person (peek (get hospital from))]
+    (-> hospital
+        (attend from)
+        (coming-in to person))))
