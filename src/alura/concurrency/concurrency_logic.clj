@@ -8,6 +8,7 @@
       count,,,
       (<,,, 5)))
 
+;; swap! my-hospital update :waiting-room conj "Renata"
 (defn coming-in
   "Coming in"
   [hospital department person]
