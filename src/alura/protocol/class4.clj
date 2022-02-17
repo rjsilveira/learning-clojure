@@ -54,4 +54,33 @@
   (class clazz))
 
 (defmulti rewrite-another-should-have-pre-authorization? my-verification-function)
-(rewrite-another-should-have-pre-authorization? "Alou")
+;; (rewrite-another-should-have-pre-authorization? "Alou")
+
+(defn authorization-type
+  "Define authorization type"
+  [request]
+  (let [patient (:patient request)
+        situation (:situation patient)
+        is-urgent? (= :urgent situation)]
+    (if is-urgent?
+      :always-authorized
+      (class patient))))
+
+(defmulti should-request-pre-authorization? authorization-type)
+
+(defmethod should-request-pre-authorization?
+  :always-authorized
+  [_]
+  false)
+
+(defmethod should-request-pre-authorization?
+  PatientWithHealthPlan
+  [request]
+  (not (some #(= % (:procedure request)) (:plan (:patient request)))))
+
+(println "-----------------------------------------------")
+
+(let [rogerio (->Patient 15 "Rogério" "19/07/2002" :urgent)
+      igor (->PatientWithHealthPlan 20 "Igor" "18/06/2001" :urgent ["Colonoscopy" "X-Ray"])]
+  (pprint (should-request-pre-authorization? {:patient rogerio :amount 1000 :procedure "X-Ray"}))
+  (pprint (should-request-pre-authorization? {:patient igor :amount 1000 :procedure "X-Ray"})))

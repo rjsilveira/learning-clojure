@@ -10,7 +10,8 @@
   :repositories [["central" {:url "https://repo1.maven.org/maven2/" :snapshots false}]
                  ["clojars" {:url "https://clojars.org/repo/"}]]
 
-  :dependencies [[org.clojure/clojure "1.10.3"]]
+  :dependencies [[org.clojure/clojure "1.10.3"]
+                 [prismatic/schema "1.2.0"]]
 
   :repl-options {:init-ns alura.introduction.core})
 
