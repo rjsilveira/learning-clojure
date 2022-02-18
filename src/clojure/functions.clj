@@ -1,4 +1,5 @@
-(ns clojure.functions)
+(ns clojure.functions
+  (:import (java.net URL)))
 
 (defn greet
   "Greet function"
@@ -170,3 +171,31 @@ identity
 
 (def call-opposite-function (opposite my-true-function))
 (println (call-opposite-function true false true))
+
+;; 9
+(defn triplicate2
+  "Triplicate 2"
+  [function & args]
+  (triplicate #(apply function args)))
+
+;; 10
+(println (Math/cos Math/PI))
+
+(println (+ (Math/pow (Math/sin 0.2) 2)
+            (Math/pow (Math/cos 0.2) 2)))
+
+;; 11
+(defn http-get [url]
+  (slurp
+    (.openStream
+      (URL. url))))
+
+(println (http-get "https://www.google.com/"))
+
+;; 12
+(defn one-less-arg [f x]
+  (fn [& args] (apply f x args)))
+
+;; 13
+(defn two-fns [f g]
+  (fn [x] (f (g x))))
