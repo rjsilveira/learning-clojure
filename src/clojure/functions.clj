@@ -190,7 +190,7 @@ identity
     (.openStream
       (URL. url))))
 
-(println (http-get "https://www.google.com/"))
+;; (println (http-get "https://www.google.com/"))
 
 ;; 12
 (defn one-less-arg [f x]
@@ -199,3 +199,13 @@ identity
 ;; 13
 (defn two-fns [f g]
   (fn [x] (f (g x))))
+
+;; APPLY
+
+(defn sum
+  "Simple sum"
+  [& arg]
+  (reduce + arg))
+
+(println (sum 1 2 3))
+(println (apply sum [1 1 1 1 1 1 1 1 1 1]))
