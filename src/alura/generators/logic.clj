@@ -1,5 +1,4 @@
-(ns alura.test.logic
-  (:require [schema.core :as s]))
+(ns alura.generators.logic)
 
 (defn can-join-in-the-queue?
   "The patient can join in the queue?"
@@ -35,10 +34,3 @@
     (-> hospital
         (attend from)
         (coming-in to patient))))
-
-(s/defn testing-pre-condition :- s/Str
-  "My documentation"
-  [arg1 :- s/Num arg2 :- s/Num]
-  {:pre [(= arg1 "Raphael")]
-   :post [(= % "return Raphael Silveira")]}
-  (str "return " arg1 " " arg2))

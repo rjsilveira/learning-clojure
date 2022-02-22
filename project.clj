@@ -11,7 +11,8 @@
                  ["clojars" {:url "https://clojars.org/repo/"}]]
 
   :dependencies [[org.clojure/clojure "1.10.3"]
-                 [prismatic/schema "1.2.0"]]
+                 [prismatic/schema "1.2.0"]
+                 [org.clojure/test.check "1.1.1"]]
 
   :repl-options {:init-ns alura.introduction.core})
 

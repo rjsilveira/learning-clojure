@@ -41,3 +41,14 @@
             false
             (catch ExceptionInfo exception
               (= :queue-is-full (:error (ex-data exception)))))))))
+
+(deftest simple-test
+  (testing "Testing pre-condition"
+    (let [arg1 "Raphael"
+          arg2 "Silveira"]
+      (is (= "return Raphael Silveira" (testing-pre-condition arg1 arg2)))))
+  (testing "Testing pos-condition"
+    (let [arg1 "Raphael"
+          arg2 "Silveira"]
+      (is (= "return Raphael Silveira" (testing-pre-condition arg1 arg2))))))
+
