@@ -49,3 +49,12 @@
                              final-hospital (transfer hospital :waiting-room to)]
                          (= (count-patients hospital) (count-patients final-hospital)))))
 
+(defn sum-funciton
+  "Sum fucntion"
+  [& args]
+  (reduce + args))
+
+(let [array [1 2 3 4 5]]
+  (println (apply sum-funciton array)))
+
+(println (read-line))
