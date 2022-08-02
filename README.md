@@ -16,3 +16,5 @@ Is necessary install [Cursive plugin](https://cursive-ide.com/) on IntelliJ
 After run REPL, open the intended file and press:
 
 `Command + Shitf + L`
+
+
